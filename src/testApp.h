@@ -4,12 +4,18 @@
 #include "ofxiPhone.h"
 #include "ofxiPhoneExtras.h"
 #include "buttonPad.h"
+#include "saveVideoPad.h"
 #include "ofxOsc.h"
 
 #define PORT_SENDER 12345
 #define PORT_RECEIVER 12344
 #define HOST "localhost"
 
+
+enum estado{
+    APP_STATE_RECORDER,
+    APP_STATE_PROJECTOR
+};
 class testApp : public ofxiPhoneApp {
 	
 public:
@@ -29,12 +35,18 @@ public:
 	void gotMemoryWarning();
 	void deviceOrientationChanged(int newOrientation);
     
+    void changeLut(int & e);
+    void changeState(int & e);
+    
     buttonPad botonera;
+    saveVideoPad saveDeleteVideo;
+    estado  modoUso;
     
     ofxOscSender oscSender;
     ofxOscReceiver oscReceiver;
     
-    void changeLut(int & e);
+    
+
 };
 
 

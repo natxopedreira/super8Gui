@@ -1,26 +1,24 @@
 //
-//  buttonPad.h
-//  blank
+//  saveVideoPad.h
+//  emptyExample
 //
-//  Created by natxo pedreira on 11/12/13.
+//  Created by natxo pedreira on 12/12/13.
 //
 //
 
-#ifndef __blank__buttonPad__
-#define __blank__buttonPad__
+#ifndef __emptyExample__saveVideoPad__
+#define __emptyExample__saveVideoPad__
 
 #include "areaPad.h"
 
-class buttonPad: public ofRectangle{
-    
+class saveVideoPad: public ofRectangle{
 public:
     
-    buttonPad();
-
+    saveVideoPad();
     void setup(string imgUrl);
     void draw();
     void touchDown(ofTouchEventArgs &touch);
-
+    
     
     ofImage bgImg;
     
@@ -30,6 +28,6 @@ public:
     
     int selectedLut;
     bool   active;
-    
 };
-#endif /* defined(__blank__buttonPad__) */
+
+#endif /* defined(__emptyExample__saveVideoPad__) */
