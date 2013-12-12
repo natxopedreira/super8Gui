@@ -21,5 +21,9 @@ send instructions:
 - /lutIndex
 - value as int, range 0-4
 
+- /saveVideo
+- value as int, 0-1
+
+
 
 
